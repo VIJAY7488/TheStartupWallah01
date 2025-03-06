@@ -82,7 +82,7 @@ const Footer = () => {
                 </li>
                 <li className="flex items-center">
                   <FaWhatsapp size={20} className="mr-2 shrink-0" />
-                  <span>+91 98765 43210</span>
+                  <span>+91 9481912068</span>
                 </li>
                 <li className="flex items-center">
                   <Mail size={20} className="mr-2 shrink-0" />

@@ -4,68 +4,71 @@ import { Container } from "./ui/container";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { Search, Filter, LinkedinIcon, Mail, User, Building, ArrowRight } from "lucide-react";
+import { Search, Filter, Mail,Building, ArrowRight } from "lucide-react";
+import { FaLinkedinIn} from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 // Sample investor data
 const investors = [
   {
     id: 1,
-    name: "Rajan Anandan",
-    company: "Sequoia Capital India",
-    email: "rajan@sequoiacap.com",
-    linkedin: "https://www.linkedin.com/in/rajananandan/",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80",
-    sectors: ["Tech", "SaaS", "Fintech"]
+    name: "Darshan Jani",
+    company: "6th Sun Ventures",
+    email: "darshan.jani@matrubharti.com",
+    linkedin: "https://www.linkedin.com/in/janidarshan/",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQH_Q_jXpP1ZYw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1665971738741?e=1745452800&v=beta&t=1ImcVNwqWa7zW11Q3xUUTZFUxrz2E4nkjQ0Mo94xbAs",
+    sectors: ["Investor","Board Member"]
   },
   {
     id: 2,
-    name: "Vani Kola",
-    company: "Kalaari Capital",
-    email: "vani@kalaari.com",
-    linkedin: "https://www.linkedin.com/in/vanikola/",
-    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80",
-    sectors: ["E-commerce", "Consumer", "EdTech"]
+    name: "Dinesh Goel",
+    company: "Siana Capital",
+    email: "dinesh.goel@sianacapital.com",
+    linkedin: "https://www.linkedin.com/in/goeldinesh/",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEKxlcJ_x_TgQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696945826785?e=1745452800&v=beta&t=JWbl9-1_aC580yaqKjJ_HA4UxSL79DggM1QQsRjKIAM",
+    sectors: ["Visiting Faculty", "Partner", "Strategic Advisor"]
   },
   {
     id: 3,
-    name: "Kunal Shah",
-    company: "Cred & Angel Investor",
-    email: "kunal@cred.club",
-    linkedin: "https://www.linkedin.com/in/kunalshah1/",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80",
-    sectors: ["Fintech", "Consumer", "D2C"]
+    name: "Avishek Das",
+    company: "KredX",
+    email: "avishek@kredx.com",
+    linkedin: "https://www.linkedin.com/in/avishek-das-6bb16512/",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFsDvZ2oUDauQ/profile-displayphoto-shrink_800_800/B4DZT5CyF0HIAg-/0/1739345044564?e=1745452800&v=beta&t=SdG6Y8VABHI_ICwJhqcmbPbk7J3UTw01vEYMH4u-4xY",
+    sectors: ["Sales", "Head - Investments", "D2C"]
   },
   {
     id: 4,
-    name: "Sanjay Mehta",
-    company: "100X.VC",
-    email: "sanjay@100x.vc",
-    linkedin: "https://www.linkedin.com/in/mehtasanjay/",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80",
-    sectors: ["Early Stage", "AI/ML", "Web3"]
+    name: "Pramod D'souza",
+    company: "Eagle10 Ventures",
+    email: "pramod@eagle10ventures.com",
+    linkedin: "https://www.linkedin.com/in/pramoddsouza/",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQGsO4zPlF8Fgw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713535879133?e=1745452800&v=beta&t=qW99s-cbRKhQtJUIHgOudWs_xWPtPcD8Ey0US8AL1zU",
+    sectors: ["Advisor-Strategy & Growth", "Management Consultant"]
   },
   {
     id: 5,
-    name: "Anupam Mittal",
-    company: "Shaadi.com & Shark Tank",
-    email: "anupam@people-group.com",
-    linkedin: "https://www.linkedin.com/in/anupammittal/",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80",
-    sectors: ["Marketplace", "D2C", "Consumer"]
+    name: "Shronit Ladhani",
+    company: "CareerNinja",
+    email: "shronit@careerninja.in",
+    linkedin: "https://www.linkedin.com/in/shronit-ladhani-b12b8227/",
+    image: "https://media.licdn.com/dms/image/v2/D4D35AQE6N1azpn3GHw/profile-framedphoto-shrink_800_800/B4DZUdUipPGcAk-/0/1739953679218?e=1741888800&v=beta&t=l6ERZ3p_0x2-o26e-S960dUzGw4YGPep39KJvfPh6VE",
+    sectors: ["Angel Investor", "Product, Design", "Sales & Innovation"]
   },
   {
     id: 6,
-    name: "Karthik Reddy",
-    company: "Blume Ventures",
-    email: "karthik@blumeventures.com",
-    linkedin: "https://www.linkedin.com/in/karthikreddy/",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80",
-    sectors: ["SaaS", "DeepTech", "Consumer"]
+    name: "Nikhil Rathi",
+    company: "Web Werks India Pvt. Ltd.",
+    email: "nikhil@neosofttech.com",
+    linkedin: "https://www.linkedin.com/in/nikhil-rathi-7532562/",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQFgcUFXdA9EDQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1615639399370?e=1745452800&v=beta&t=gD-t-XscO2hTNxTDQsC5dXgYy5WoXdwSRC_1rZWGi0k",
+    sectors: ["Director", "General Partner"]
   }
 ];
 
 // Available sector filters
-const sectors = ["All", "Tech", "SaaS", "Fintech", "E-commerce", "Consumer", "D2C", "EdTech", "AI/ML", "Web3", "Marketplace", "DeepTech", "Early Stage"];
+const sectors = ["All", "Tech", "Fintech", "E-commerce", "Consumer", "D2C", "EdTech", "AI/ML", "Web3", "Marketplace", "Early Stage"];
 
 const InvestorData = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -182,7 +185,7 @@ const InvestorData = () => {
                     <span className="text-sm text-gray-600">{investor.email}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <LinkedinIcon className="h-4 w-4 text-gray-500" />
+                    <FaLinkedinIn className="h-4 w-4 text-gray-600" />
                     <a href={investor.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
                       LinkedIn Profile
                     </a>
@@ -212,10 +215,15 @@ const InvestorData = () => {
           <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
             Get VIP access to 500+ active investors, their sweet spots, check sizes, and direct contacts. Your fundraising secret weapon.
           </p>
-          <Button size="lg" className="px-6">
-            Unlock Investor Access
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <div className="flex justify-center">
+            <Link
+              to="/investorslist"
+              className="inline-flex items-center justify-center px-6 py-3 h-12 border border-primary bg-primary text-white font-medium rounded-lg shadow-md hover:bg-opacity-90 transition-all duration-300"
+            >
+              Unlock Investor Access
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </Container>
     </section>

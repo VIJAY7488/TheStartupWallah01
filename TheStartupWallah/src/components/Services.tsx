@@ -7,28 +7,35 @@ const services = [
     icon: <Rocket className="w-8 h-8 text-secondary" />,
     title: "Investor ",
     description: "Meet your funding soulmates – we'll connect you with investors who get your vision and want in.",
-    link: "#",
+    link: "/investor",
     delay: "0s",
   },
   {
     icon: <BookOpen className="w-8 h-8 text-secondary" />,
-    title: "Growth Playbooks",
+    title: "Growth E-Books",
     description: "Snag ready-to-use guides on marketing, sales, and growth hacking that actually work.",
-    link: "#",
+    link: "/growth-e-books",
     delay: "0.1s",
   },
   {
     icon: <FileText className="w-8 h-8 text-secondary" />,
     title: "Pitch Perfect",
     description: "Craft irresistible pitch decks and business plans that make investors reach for their checkbooks.",
-    link: "#",
+    link: "/pitch-perfect",
     delay: "0.2s",
   },
   {
     icon: <UserCheck className="w-8 h-8 text-secondary" />,
     title: "Mentor Magic",
     description: "Get brain-picking sessions with founders who've been there, done that, and wrote the playbook.",
-    link: "#",
+    link: "/mentor-magic",
+    delay: "0.3s",
+  },
+  {
+    icon: <UserCheck className="w-8 h-8 text-secondary" />,
+    title: "Web Services",
+    description: "We offer custom web development, responsive design, SEO, and secure hosting for fast, scalable, and user-friendly solutions",
+    link: "/web-services",
     delay: "0.3s",
   },
 ];
@@ -69,7 +76,7 @@ const Services = ({ fullPage }: ServicesProps = {}) => {
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-text-muted mb-6">{service.description}</p>
+              <p className="text-text-muted mb-6 line-clamp-4">{service.description}</p>
               <a
                 href={service.link}
                 className="group inline-flex items-center text-primary font-medium"

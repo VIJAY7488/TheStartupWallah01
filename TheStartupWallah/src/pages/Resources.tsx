@@ -15,10 +15,10 @@ const Resources = () => {
       </Helmet>
       <Navbar />
       <div className="pt-20">
-        <header className="bg-primary py-20 text-white">
-          <div className="container mx-auto px-4">
+        <header className="bg-primary py-20 text-white ">
+          <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Resource Hub</h1>
-            <p className="text-xl max-w-3xl">E-books, guides, and tools to help your startup succeed</p>
+            <p className="text-xl ">E-books, guides, and tools to help your startup succeed</p>
           </div>
         </header>
         <ResourceHub fullPage={true} />

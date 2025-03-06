@@ -99,7 +99,7 @@ const Hero = () => {
 
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <div className="text-3xl font-bold text-primary">$10M+</div>
+                    <div className="text-3xl font-bold text-primary">$1M+</div>
                     <p className="text-sm text-text-muted">Funding Raised</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow-sm">

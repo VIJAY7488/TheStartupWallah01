@@ -45,16 +45,16 @@ const Navbar = () => {
               href="/"
               className="text-primary font-poppins font-bold text-2xl flex items-center"
             >
-              The Startup Wallah
+              <span className="text-secondary">The</span>&nbsp;Startup Wallah <sup className="text-sm  text-red-600 bg-gray-200 px-1 rounded">BETA</sup>
             </a>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               <a
-                href="#services"
+                href="/"
                 className="text-text-dark font-medium hover:text-primary transition-colors"
               >
-                Services
+                Home
               </a>
               <a
                 href="#about"
@@ -87,15 +87,16 @@ const Navbar = () => {
                     >
                       Blog & Insights
                     </a>
+                    
                   </div>
                 </div>
               </div>
-              <a
-                href="#contact"
-                className="text-text-dark font-medium hover:text-primary transition-colors"
-              >
-                Contact
-              </a>
+                    <a
+                        href="/services"
+                        className="text-text-dark font-medium hover:text-primary transition-colors"
+                      >
+                        Services
+                    </a>
             </div>
 
             <div className="hidden lg:flex items-center space-x-3">
@@ -121,7 +122,6 @@ const Navbar = () => {
                 className="p-2 text-text-dark hover:text-primary transition-colors"
                 aria-label="Search"
               >
-                <Search className="h-5 w-5" />
               </button>
               <button
                 onClick={toggleMobileMenu}
@@ -142,11 +142,11 @@ const Navbar = () => {
             <div className="lg:hidden mt-4 py-4 bg-white rounded-lg shadow-lg animate-fade-in">
               <div className="flex flex-col space-y-3">
                 <a
-                  href="#services"
+                  href="/"
                   className="px-4 py-2 text-text-dark font-medium hover:bg-primary/5 hover:text-primary"
                   onClick={toggleMobileMenu}
                 >
-                  Services
+                  Home
                 </a>
                 <a
                   href="#about"
@@ -177,11 +177,11 @@ const Navbar = () => {
                   Blog & Insights
                 </a>
                 <a
-                  href="#contact"
+                  href="#services"
                   className="px-4 py-2 text-text-dark font-medium hover:bg-primary/5 hover:text-primary"
                   onClick={toggleMobileMenu}
                 >
-                  Contact
+                  Services
                 </a>
                 <div className="pt-2 px-4">
                   <a

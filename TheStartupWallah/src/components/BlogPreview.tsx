@@ -1,6 +1,7 @@
 
 import { Container } from "./ui/container";
 import { ArrowRight, Calendar, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const blogPosts = [
   {
@@ -11,6 +12,7 @@ export const blogPosts = [
     date: "May 15, 2023",
     image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     category: "Funding",
+    link:"/blog/pitch-deck-sins-that-make-investors-ghost-you"
   },
   {
     id: 2,
@@ -20,19 +22,22 @@ export const blogPosts = [
     date: "June 2, 2023",
     image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1736&q=80",
     category: "Product",
+    link:"/blog/build-an-mvp-that-investors-cant-resist"
   },
   {
     id: 3,
-    title: "The Startup Equity Playbook",
+    title: "The Startup Equity E-Book",
     excerpt: "Master the art of dividing the pie without creating enemies or selling your soul.",
     author: "Sarah Williams",
     date: "June 18, 2023",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     category: "Finance",
+    link:"/blog/the-startup-equity-e-book"
   },
 ];
 
 const BlogPreview = () => {
+ 
   return (
     <section id="blog" className="section-padding bg-primary/5 relative overflow-hidden">
       {/* Background elements */}
@@ -83,19 +88,19 @@ const BlogPreview = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3">{post.title}</h3>
                 <p className="text-text-muted mb-5">{post.excerpt}</p>
-                <a
-                  href="#"
+                <Link
+                  to={post.link}
                   className="group inline-flex items-center text-primary font-medium"
                 >
                   Read Full Story{" "}
                   <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
+                </Link>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
+        {/* <div className="mt-12 text-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
           <a
             href="#"
             className="btn-hover inline-flex items-center justify-center rounded-md px-6 py-3 font-semibold text-white bg-secondary shadow-md"
@@ -103,7 +108,7 @@ const BlogPreview = () => {
             Explore All Articles
             <ArrowRight className="ml-2 h-4 w-4" />
           </a>
-        </div>
+        </div> */}
       </Container>
     </section>
   );
