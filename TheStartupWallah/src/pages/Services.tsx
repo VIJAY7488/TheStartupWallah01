@@ -16,9 +16,9 @@ const Services = () => {
       <Navbar />
       <div className="pt-20">
         <header className="bg-primary py-20 text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 text-center ">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Our Services</h1>
-            <p className="text-xl max-w-3xl">Comprehensive support to help your startup reach its full potential</p>
+            <p className="text-xl max-w-7xl">Comprehensive support to help your startup reach its full potential</p>
           </div>
         </header>
         <ServicesSection fullPage={true} />

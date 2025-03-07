@@ -82,7 +82,7 @@ const Navbar = () => {
                       Resource Hub
                     </a>
                     <a
-                      href="#blog"
+                      href="/blog"
                       className="block px-4 py-3 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary"
                     >
                       Blog & Insights
@@ -170,7 +170,7 @@ const Navbar = () => {
                   Resource Hub
                 </a>
                 <a
-                  href="#blog"
+                  href="/blog"
                   className="px-4 py-2 text-text-dark font-medium hover:bg-primary/5 hover:text-primary"
                   onClick={toggleMobileMenu}
                 >

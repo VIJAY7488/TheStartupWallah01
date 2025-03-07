@@ -8,6 +8,7 @@ import { Search, Filter, Mail,Building, ArrowRight } from "lucide-react";
 import { FaLinkedinIn} from "react-icons/fa";
 import  Footer  from "../../components/Footer";
 import Navbar from "@/components/Navbar";
+import CallToAction from "@/components/CallToAction";
 
 
 // Sample investor data
@@ -117,111 +118,122 @@ const investors = [
       "linkedin": "https://www.linkedin.com/in/rahulchowdhri/",
       "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
     },
-    // { "id": 12,
-    //   "name": "Rahat Kulshreshtha",
-    //   "company": "Quidich",
-    //   "bio": "Co-Founder - Quidich Innovation Labs | Chairman - Drone Federation Of India | Sports Broadcast | AR | AI/Computer Vision | Metaverse",
-    //   "image": "https://media.licdn.com/dms/image/v2/C4D03AQHvWr8tiQjz_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1604508585933?e=1745452800&v=beta&t=TAi6gDuforiyjQ6jcN0u0cSl1qXWFArDwAv50yA3h9k",
-    //   "email": "rahat@quidich.com",
-    //   "linkedin": "https://www.linkedin.com/in/rahatkul/"
-    // },
-    // { "id": 13,
-    //   "name": "Dhiraj Shah",
-    //   "company": "Venture Catalysts | India's First Integrated Incubator",
-    //   "bio": "Chief of Staff at Castler | Venture Capital | Angel Investor",
-    //   "image": "https://media.licdn.com/dms/image/v2/C4D03AQG3rEkPXLKSYQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617959048165?e=1745452800&v=beta&t=8HqBk56OHYBJ6_VN_qWYmwfy24-c-jwpKfYd6tcSEeI",
-    //   "email": "dhiraj.shah@venturecatalysts.in",
-    //   "linkedin": "https://www.linkedin.com/in/dhiraj-shah/"
-    // },
-    // { "id": 14,
-    //   "name": "Kunal Gupta",
-    //   "company": "Mount Talent Consulting",
-    //   "bio": "Founder: Mount Talent, Rozgar.com | ET 40 under 40 Business Leader",
-    //   "image": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-    //   "email": "kunal.gupta@mounttalent.com",
-    //   "linkedin": "https://www.linkedin.com/in/kunalgupta/"
-    // },
-    // { "id": 15,
-    //   "name": "Sanjay Ramakrishnan",
-    //   "company": "Multiply Ventures",
-    //   "bio": "Founder & General Partner @ Multiply Ventures (Ex-Flipkart/Myntra/Google/GE Healthcare)",
-    //   "image": "https://media.licdn.com/dms/image/v2/D5603AQF4tXnpaY525A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683692125983?e=1745452800&v=beta&t=wGbNKpRza7dSWsbG9GS63tB31fsohidq2MYLUK3Ksnc",
-    //   "email": "sanjay@multiplyventures.com",
-    //   "linkedin": "https://www.linkedin.com/in/rsanjay/"
-    // },
-    // { 
-    //   "id": 16,
-    //   "name": "Madhav Tandan",
-    //   "image": "https://shorturl.at/tYHso",
-    //   "linkedin": "https://www.linkedin.com/in/madhav-tandan-71974124/",
-    //   "company": "Omidyar Network India",
-    //   "position": "Investor",
-    //   "email": "madhav@gramfactory.com"
-    // },
-    // { 
-    //   "id": 17,
-    //   "name": "Sumeet Kapur",
-    //   "image": "https://media.licdn.com/dms/image/v2/C5103AQGURSCjV52BBA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1565611819256?e=1746057600&v=beta&t=izsQR4uLeiVtGHfynXmfL2SP1DAVFtN5WSwM3laH6SA",
-    //   "linkedin": "https://www.linkedin.com/in/sumeetkapur1/",
-    //   "company": "Wellcure.com",
-    //   "position": "Founder & CEO",
-    //   "email": "sumeet.kapur@wellcure.com"
-    // },
-    // { 
-    //   "id": 18,
-    //   "name": "Soniya Kukreja",
-    //   "image": "https://shorturl.at/1Latr",
-    //   "linkedin": "https://www.linkedin.com/in/soniya-kukreja-92a571123/",
-    //   "company": "Venture Catalysts | India's First Integrated Incubator",
-    //   "position": "Investor Relations Manager",
-    //   "email": "soniya@venturecatalysts.in"
-    // },
-    // { 
-    //   "id": 19,
-    //   "name": "Prashanth Aluru",
-    //   "company": "Facebook",
-    //   "bio": "CEO & Co-Founder, TMRW House of Brands | UNHustler",
-    //   "image": "https://media.licdn.com/dms/image/v2/D5603AQHOm9SCLdrHmw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692174460453?e=1745452800&v=beta&t=YvvIRqJGW8o9innhcO-H-nOE8UcdA3DCqpEMpMncnlc",
-    //   "email": "prashanth@avataar.me",
-    //   "linkedin": "https://www.linkedin.com/in/prashanthaluru/"
-    // },
-    // { 
-    //   "id": 20,
-    //   "name": "Nickson Sharma",
-    //   "company": "Northeast Venture Fund",
-    //   "bio": "Venture Capital & Private Equity | NE Venture Fund & NRL Ideation Angel Fund | Manipur Startup Venture Fund | Stanford Seed Spark Program Mentor",
-    //   "image": "https://media.licdn.com/dms/image/v2/C5103AQE0ApWWV5MmnA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1580991238476?e=1745452800&v=beta&t=ID-gSjwf8i6ThNJiAs_Sy25m5Xw6o1qFTVVTL6m4wmc",
-    //   "email": "nickson@nedfiventure.com",
-    //   "linkedin": "https://www.linkedin.com/in/nicksonsharma/"
-    // },
-    // { 
-    //   "id": 21,
-    //   "name": "Prem Singh",
-    //   "company": "Prem.VC",
-    //   "bio": "CEO, ClientCurve, Inc - Looking for Data Scientist, UI/UX Designer, Amazon Seller Account Setup, Shopify Developer, and BD Team members",
-    //   "image": "https://media.licdn.com/dms/image/v2/C5603AQHG12nYXxTSlw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1617882237803?e=1745452800&v=beta&t=aF9hRXkryLoNXrz2b9AQQsBrElo0jd6PWhCc2eTbaXg",
-    //   "email": "prem@clientcurve.com",
-    //   "linkedin": "https://www.linkedin.com/in/premsinghtara/"
-    // },
-    // { 
-    //   "id": 22,
-    //   "name": "Navin Khabiya",
-    //   "company": "NSquareIT",
-    //   "bio": "With over 16 years of experience in web and mobile development, I help businesses of all sizes create innovative and user-friendly digital products that meet their needs and goals.",
-    //   "image": "https://media.licdn.com/dms/image/v2/C5603AQHvyjJxbyifXg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1631261106369?e=1745452800&v=beta&t=sOG6Bur1OdWXrkqTpZQ82fuOVhFstHmc-PqJd647PDs",
-    //   "email": "navin@nsquareit.com",
-    //   "linkedin": "https://www.linkedin.com/in/navinkhabiya/"
-    // },
-  
-    // { 
-    //   "id": 23,
-    //   "name": "Koushik Ramachandra",
-    //   "company": "NSquareIT",
-    //   "bio": "16+ years of engineering experience building and scaling Internet applications, data, and infrastructure platforms.",
-    //   "image": "https://media.licdn.com/dms/image/v2/D5603AQF3OlvRUk9CBw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1714879009136?e=1745452800&v=beta&t=RFDby3A0bcoGSS_pS_zucVKhinqhKGcmIhddjmy_iIc",
-    //   "email": "koushik@phonepe.com",
-    //   "linkedin": "https://www.linkedin.com/in/koushikramachandra/"
-    // },
+    { "id": 12,
+      "name": "Rahat Kulshreshtha",
+      "company": "Quidich",
+      "bio": "Co-Founder - Quidich Innovation Labs | Chairman - Drone Federation Of India | Sports Broadcast | AR | AI/Computer Vision | Metaverse",
+      "image": "https://media.licdn.com/dms/image/v2/C4D03AQHvWr8tiQjz_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1604508585933?e=1745452800&v=beta&t=TAi6gDuforiyjQ6jcN0u0cSl1qXWFArDwAv50yA3h9k",
+      "email": "rahat@quidich.com",
+      "linkedin": "https://www.linkedin.com/in/rahatkul/",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+     },
+    { "id": 13,
+      "name": "Dhiraj Shah",
+      "company": "Venture Catalysts | India's First Integrated Incubator",
+      "bio": "Chief of Staff at Castler | Venture Capital | Angel Investor",
+      "image": "https://media.licdn.com/dms/image/v2/C4D03AQG3rEkPXLKSYQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617959048165?e=1745452800&v=beta&t=8HqBk56OHYBJ6_VN_qWYmwfy24-c-jwpKfYd6tcSEeI",
+      "email": "dhiraj.shah@venturecatalysts.in",
+      "linkedin": "https://www.linkedin.com/in/dhiraj-shah/",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+    },
+    { "id": 14,
+      "name": "Kunal Gupta",
+      "company": "Mount Talent Consulting",
+      "bio": "Founder: Mount Talent, Rozgar.com | ET 40 under 40 Business Leader",
+      "image": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "email": "kunal.gupta@mounttalent.com",
+      "linkedin": "https://www.linkedin.com/in/kunalgupta/",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+     },
+    { "id": 15,
+      "name": "Sanjay Ramakrishnan",
+      "company": "Multiply Ventures",
+      "bio": "Founder & General Partner @ Multiply Ventures (Ex-Flipkart/Myntra/Google/GE Healthcare)",
+      "image": "https://media.licdn.com/dms/image/v2/D5603AQF4tXnpaY525A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683692125983?e=1745452800&v=beta&t=wGbNKpRza7dSWsbG9GS63tB31fsohidq2MYLUK3Ksnc",
+      "email": "sanjay@multiplyventures.com",
+      "linkedin": "https://www.linkedin.com/in/rsanjay/",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+    },
+    { 
+      "id": 16,
+      "name": "Madhav Tandan",
+      "image": "https://shorturl.at/tYHso",
+      "linkedin": "https://www.linkedin.com/in/madhav-tandan-71974124/",
+      "company": "Omidyar Network India",
+      "position": "Investor",
+      "email": "madhav@gramfactory.com",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+    },
+    { 
+      "id": 17,
+      "name": "Sumeet Kapur",
+      "image": "https://media.licdn.com/dms/image/v2/C5103AQGURSCjV52BBA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1565611819256?e=1746057600&v=beta&t=izsQR4uLeiVtGHfynXmfL2SP1DAVFtN5WSwM3laH6SA",
+      "linkedin": "https://www.linkedin.com/in/sumeetkapur1/",
+      "company": "Wellcure.com",
+      "position": "Founder & CEO",
+      "email": "sumeet.kapur@wellcure.com",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+    },
+    { 
+      "id": 18,
+      "name": "Soniya Kukreja",
+      "image": "https://shorturl.at/1Latr",
+      "linkedin": "https://www.linkedin.com/in/soniya-kukreja-92a571123/",
+      "company": "Venture Catalysts | India's First Integrated Incubator",
+      "position": "Investor Relations Manager",
+      "email": "soniya@venturecatalysts.in",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+    },
+    { 
+      "id": 19,
+      "name": "Prashanth Aluru",
+      "company": "Facebook",
+      "bio": "CEO & Co-Founder, TMRW House of Brands | UNHustler",
+      "image": "https://media.licdn.com/dms/image/v2/D5603AQHOm9SCLdrHmw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692174460453?e=1745452800&v=beta&t=YvvIRqJGW8o9innhcO-H-nOE8UcdA3DCqpEMpMncnlc",
+      "email": "prashanth@avataar.me",
+      "linkedin": "https://www.linkedin.com/in/prashanthaluru/",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+    },
+    { 
+      "id": 20,
+      "name": "Nickson Sharma",
+      "company": "Northeast Venture Fund",
+      "bio": "Venture Capital & Private Equity | NE Venture Fund & NRL Ideation Angel Fund | Manipur Startup Venture Fund | Stanford Seed Spark Program Mentor",
+      "image": "https://media.licdn.com/dms/image/v2/C5103AQE0ApWWV5MmnA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1580991238476?e=1745452800&v=beta&t=ID-gSjwf8i6ThNJiAs_Sy25m5Xw6o1qFTVVTL6m4wmc",
+      "email": "nickson@nedfiventure.com",
+      "linkedin": "https://www.linkedin.com/in/nicksonsharma/",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+    },
+    { 
+      "id": 21,
+      "name": "Prem Singh",
+      "company": "Prem.VC",
+      "bio": "CEO, ClientCurve, Inc - Looking for Data Scientist, UI/UX Designer, Amazon Seller Account Setup, Shopify Developer, and BD Team members",
+      "image": "https://media.licdn.com/dms/image/v2/C5603AQHG12nYXxTSlw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1617882237803?e=1745452800&v=beta&t=aF9hRXkryLoNXrz2b9AQQsBrElo0jd6PWhCc2eTbaXg",
+      "email": "prem@clientcurve.com",
+      "linkedin": "https://www.linkedin.com/in/premsinghtara/",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+    },
+    { 
+      "id": 22,
+      "name": "Navin Khabiya",
+      "company": "NSquareIT",
+      "bio": "With over 16 years of experience in web and mobile development, I help businesses of all sizes create innovative and user-friendly digital products that meet their needs and goals.",
+      "image": "https://media.licdn.com/dms/image/v2/C5603AQHvyjJxbyifXg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1631261106369?e=1745452800&v=beta&t=sOG6Bur1OdWXrkqTpZQ82fuOVhFstHmc-PqJd647PDs",
+      "email": "navin@nsquareit.com",
+      "linkedin": "https://www.linkedin.com/in/navinkhabiya/",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+    },
+    { 
+      "id": 23,
+      "name": "Koushik Ramachandra",
+      "company": "NSquareIT",
+      "bio": "16+ years of engineering experience building and scaling Internet applications, data, and infrastructure platforms.",
+      "image": "https://media.licdn.com/dms/image/v2/D5603AQF3OlvRUk9CBw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1714879009136?e=1745452800&v=beta&t=RFDby3A0bcoGSS_pS_zucVKhinqhKGcmIhddjmy_iIc",
+      "email": "koushik@phonepe.com",
+      "linkedin": "https://www.linkedin.com/in/koushikramachandra/",
+      "sectors": ["Advisor-Strategy & Growth", "Management Consultant"]
+    },
     { 
       "id": 24,
       "name": "Partha Sarathi Guha Patra",
@@ -298,6 +310,17 @@ const investors = [
 const sectors = ["All", "Tech", "Fintech", "E-commerce", "Consumer", "D2C", "EdTech", "AI/ML", "Web3", "Marketplace", "Early Stage"];
 
 const InvestorsList = () => {
+
+  const itemPerPage = 9;
+  const totalPages = Math.ceil(investors.length / itemPerPage);
+  
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const paginatedInvestor = investors.slice(
+    (currentPage - 1) * itemPerPage,
+    currentPage * itemPerPage
+  );
+
   const [searchTerm, setSearchTerm] = useState("");
   const [activeSector, setActiveSector] = useState("All");
   const [showFilterMenu, setShowFilterMenu] = useState(false);
@@ -437,8 +460,26 @@ const InvestorsList = () => {
               </Card>
             ))}
           </div>
+          
+         {/* Pagination */}
+          <div className='flex justify-center mt-8'>
+          <button 
+          className="px-4 py-2 mx-2 bg-blue-600 text-white border rounded disabled:opacity-50"
+          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+          >
+            Previous
+          </button>
+          <span className="px-4 py-2">{`Page ${currentPage} of ${totalPages}`}</span>
+          <button
+          className="px-4 py-2 mx-2 bg-blue-600 text-white border rounded disabled:opacity-50"
+          onClick={() => setCurrentPage((next) => Math.min(next+1, totalPages))}
+          disabled={currentPage === totalPages}
+          >Next</button>
+        </div>
         </Container>
       </section>
+      <CallToAction/>
       <Footer/>
     </>
   );

@@ -16,9 +16,9 @@ const Blog = () => {
       <Navbar />
       <div className="pt-20">
         <header className="bg-primary py-20 text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Blog & Insights</h1>
-            <p className="text-xl max-w-3xl">The latest insights, funding tips, and growth hacks for startup success</p>
+            <p className="text-xl max-w-7xl">The latest insights, funding tips, and growth hacks for startup success</p>
           </div>
         </header>
         <BlogList />

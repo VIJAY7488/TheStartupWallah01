@@ -134,6 +134,7 @@ const categories = [
 ];
 
 const CaseStudies = () => {
+  
   const [activeCategory, setActiveCategory] = useState("All");
   const [requestStudy, setRequestStudy] = useState("");
   const [showRequestForm, setShowRequestForm] = useState(false);
@@ -251,17 +252,12 @@ const CaseStudies = () => {
                     </ul>
                   </CardContent>
                   <CardFooter className="flex flex-col gap-2">
-                    {/* <Button variant="outline" className="w-full group">
-                      Read Case Study
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Button> */}
-                    {/* View PDF Button */}
                     <Button
                       variant="default"
                       className="w-full"
                       onClick={() => window.open(study.downloadLink, "_blank")}
                     >
-                      View PDF
+                      View 
                     </Button>
                   </CardFooter>
                 </Card>
