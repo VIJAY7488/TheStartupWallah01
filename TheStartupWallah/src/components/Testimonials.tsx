@@ -2,27 +2,26 @@
 import { Container } from "./ui/container";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { FaLinkedinIn} from "react-icons/fa";
 
 const testimonials = [
   {
     id: 1,
     content:
-      "The Startup Wallah's investor network was instrumental in helping us secure our seed funding of $1.2M. Their guidance throughout the process was invaluable.",
-    author: "Samantha Chen",
-    position: "CEO, FinTech Solutions",
-    image: "https://randomuser.me/api/portraits/women/18.jpg",
-    company: "FinTech Solutions",
-    funding: "$1.2M",
+      "Traditional Marketing vs Zero Marketing – A deep-dive report by Rutik Mane, analyzing the differences between conventional marketing tactics and the revolutionary zero-marketing approach. His insights are helping startups rethink their branding strategies.",
+    author: "Rutik Mane",
+    position: "Inspiring Entrepreneur, Student at PWIOI",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHTeND3yXikAw/profile-displayphoto-shrink_800_800/B56ZTHK27PHwAc-/0/1738508303040?e=1746662400&v=beta&t=kFKgbNlbTt0rIPJEvKaU3MNtHLvsTfCgJo_FP9sZU1k",
+    linkedIn:"https://www.linkedin.com/in/rutik-mane-83616b2a2/"
   },
   {
     id: 2,
     content:
-      "The mentorship program exceeded our expectations. Our mentor helped us pivot our business model, resulting in a 300% increase in user acquisition within just two months.",
-    author: "Rajiv Mehta",
-    position: "Founder, EduSpark",
-    image: "https://randomuser.me/api/portraits/men/54.jpg",
-    company: "EduSpark",
-    funding: "$800K",
+      " The Complete Guide to Government Funding for Indian Startups (2025) - A complete guide on government funding breaks down key schemes, grants, eligibility criteria, and application steps, along with expert strategies to maximize funding opportunities for startups.",
+    author: "Prakash Nimbalkar",
+    position: "Co-Founder (Aasabie), Head - School of Management (PWIOI)",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQGXHNdY8gWFOg/profile-displayphoto-shrink_800_800/B56ZSRX3FjGQAg-/0/1737605739447?e=1746662400&v=beta&t=nWt5pjSb_lUJI8JeOy4sMM0xD7o02ut9zPlBHlT2Hl0",
+    linkedIn:"https://www.linkedin.com/in/prakash-nimbalkar/"
   },
   {
     id: 3,
@@ -31,10 +30,9 @@ const testimonials = [
     author: "Alex Johnson",
     position: "Co-founder, GreenTech",
     image: "https://randomuser.me/api/portraits/men/22.jpg",
-    company: "GreenTech",
-    funding: "$2.5M",
+    linkedIn:"https://www.linkedin.com/in/alex-johnson-2db7b222/"
   },
-];
+];  
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -69,13 +67,13 @@ const Testimonials = () => {
       <Container className="relative z-10">
         <div className="mb-16 max-w-3xl mx-auto text-center">
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4 animate-fade-in">
-            Success Stories
+            Contributors
           </div>
           <h2 className="section-title animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            See What <span className="text-gradient">Our Startups</span> Have Achieved
+          A <span className="text-gradient">Heartfelt Thank You</span> to Our Contributors
           </h2>
           <p className="section-subtitle animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Don't just take our word for it. Hear directly from founders who have experienced transformative results with our support.
+            Success thrives on the support, guidance, and belief of others, turning small steps into giant leaps.
           </p>
         </div>
 
@@ -104,35 +102,18 @@ const Testimonials = () => {
                         </div>
                         <h3 className="text-xl font-bold">{testimonial.author}</h3>
                         <p className="text-text-muted mb-2">{testimonial.position}</p>
-                        <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full">
-                          {testimonial.company}
-                        </div>
-                        <div className="mt-4 pt-4 border-t border-gray-200">
-                          <div className="text-sm text-text-muted">Funding Raised</div>
-                          <div className="text-2xl font-bold text-secondary">
-                            {testimonial.funding}
-                          </div>
+                        
+                        <div className="flex items-center gap-2">
+                          <FaLinkedinIn className="h-4 w-4 text-gray-600" />
+                          <a href={testimonial.linkedIn} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                            LinkedIn Profile
+                          </a>
                         </div>
                       </div>
                       <div className="w-full md:w-2/3">
-                        <blockquote className="text-xl md:text-2xl font-medium italic leading-relaxed text-text-dark">
+                        <blockquote className="text-xl md:text-xl font-medium italic leading-relaxed text-text-dark">
                           "{testimonial.content}"
                         </blockquote>
-                        <div className="mt-8 flex items-center">
-                          <div className="flex space-x-1">
-                            {[...Array(5)].map((_, i) => (
-                              <svg
-                                key={i}
-                                className="w-5 h-5 text-yellow-500"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                              >
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            ))}
-                          </div>
-                          <span className="ml-2 text-text-muted">Case Study</span>
-                        </div>
                       </div>
                     </div>
                   </div>

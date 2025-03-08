@@ -11,6 +11,9 @@ import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import InvestorsList from "./pages/InvestorsList/InvestorsList";
+import MarketingEbook from "./pages/EBookSection/MarketingEbook";
+import SalesEbook from "./pages/EBookSection/SalesEbook";
+import EntrepreneurshipEbook from "./pages/EBookSection/EntrepreneurshipEbook";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +28,9 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/marketingebook" element={<MarketingEbook/>} />
+          <Route path="/resources/salesebook" element={<SalesEbook/>} />
+          <Route path="/resources/entrepreneurship" element={<EntrepreneurshipEbook/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/investorslist" element={<InvestorsList />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

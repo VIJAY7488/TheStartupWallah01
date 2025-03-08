@@ -1,6 +1,6 @@
 
 import { Container } from "./ui/container";
-import { ArrowRight, Rocket, BookOpen, FileText, UserCheck } from "lucide-react";
+import { ArrowRight, Rocket, BookOpen, FileText, UserCheck,CodeXml } from "lucide-react";
 
 const services = [
   {
@@ -32,7 +32,7 @@ const services = [
     delay: "0.3s",
   },
   {
-    icon: <UserCheck className="w-8 h-8 text-secondary" />,
+    icon: <CodeXml className="w-8 h-8 text-secondary" />,
     title: "Web Services",
     description: "We offer custom web development, responsive design, SEO, and secure hosting for fast, scalable, and user-friendly solutions",
     link: "/web-services",
@@ -72,18 +72,18 @@ const Services = ({ fullPage }: ServicesProps = {}) => {
               className="card-hover glass-effect p-6 rounded-xl animate-fade-in"
               style={{ animationDelay: service.delay }}
             >
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 ">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-text-muted mb-6 line-clamp-4">{service.description}</p>
-              <a
+              {/* <a
                 href={service.link}
                 className="group inline-flex items-center text-primary font-medium"
               >
                 Tell me more{" "}
                 <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </a> */}
             </div>
           ))}
         </div>

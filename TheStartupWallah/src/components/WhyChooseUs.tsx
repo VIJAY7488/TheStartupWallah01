@@ -138,7 +138,7 @@ const WhyChooseUs = () => {
             href="#testimonials"
             className="btn-hover inline-flex items-center justify-center rounded-md px-6 py-3 font-semibold text-white bg-secondary shadow-md"
           >
-            See Success Stories
+            See Our Contributors
           </a>
         </div>
       </Container>

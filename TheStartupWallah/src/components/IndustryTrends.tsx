@@ -28,9 +28,9 @@ const trends = [
   },
   {
     id: 3,
-    title: "Remote-First Startup Playbook",
-    description: "Strategies for building, scaling, and maintaining culture in distributed teams across time zones.",
-    category: "Operations",
+    title: "Make.Com",
+    description: "Helping startups automate workflows and streamline operations using Make.com.",
+    category: "Automation",
     icon: <Globe className="h-5 w-5 text-primary" />,
     isPremium: false,
     readTime: "10 min read",
@@ -48,7 +48,7 @@ const trends = [
   }
 ];
 
-const categories = ["All", "Technology", "Finance", "Operations", "Marketing"];
+const categories = ["All", "Technology", "Finance", "Automation", "Marketing"];
 
 const IndustryTrends = () => {
   const [activeCategory, setActiveCategory] = React.useState("All");

@@ -1,6 +1,8 @@
 import { Container } from "./ui/container";
 import { Download, Search, ArrowRight, BookOpen, FileText, Video } from "lucide-react";
 import { useState } from "react";
+import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom"
 
 type ResourceHubProps = {
   fullPage?: boolean;
@@ -19,6 +21,7 @@ const resources = [
     isFeatured: true,
     isNew: false,
     isPremium: true,
+    link:"/resources/governmentfunding"
   },
   {
     id: 2,
@@ -30,6 +33,7 @@ const resources = [
     isFeatured: false,
     isNew: true,
     isPremium: false,
+    link:"/resources/marketingebook"
   },
   {
     id: 3,
@@ -41,6 +45,7 @@ const resources = [
     isFeatured: false,
     isNew: false,
     isPremium: true,
+    link:"/resources/salesebook"
   },
   {
     id: 4,
@@ -52,6 +57,7 @@ const resources = [
     isFeatured: false,
     isNew: false,
     isPremium: false,
+    link:"/resources/entrepreneurship"
   },
   {
     id: 5,
@@ -63,10 +69,11 @@ const resources = [
     isFeatured: false,
     isNew:false,
     isPremium: true,
+    link:"/resources/startupebook"
   },
   {
     id: 6,
-    title: "Case Studies for building a startup",
+    title: "Case Studies and Research Papers",
     description: "A complete Q&A guide for entrepreneurs on how to build a successful startup.",
     category: "Case Studies",
     image: "https://plus.unsplash.com/premium_photo-1664301747246-ca55593015f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FzZSUyMHN0dWR5fGVufDB8fDB8fHww",
@@ -74,10 +81,14 @@ const resources = [
     isFeatured: false,
     isNew: true,
     isPremium: false,
+    link:"/resources/casestudies&research"
   },
 ];
 
 const ResourceHub = ({ fullPage = false }: ResourceHubProps) => {
+
+  const navigate = useNavigate();
+
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -116,9 +127,9 @@ const ResourceHub = ({ fullPage = false }: ResourceHubProps) => {
               <img
                 src={featuredResource.image}
                 alt={featuredResource.title}
-                className="w-full h-64 md:h-80 object-cover"
+                className="w-full h-[425px] md:h-80 object-cover"
               />
-              <div className="absolute inset-0 z-20 flex flex-col justify-center p-6 md:p-12">
+              <div className="absolute inset-0 z-20 flex flex-col justify-center p-6 md:p-12 ">
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6">
                   <div className="inline-block px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-full backdrop-blur-sm mb-4 md:mb-0">
                     Featured E-Book
@@ -220,14 +231,10 @@ const ResourceHub = ({ fullPage = false }: ResourceHubProps) => {
                 <h3 className="text-xl font-bold mb-2">{resource.title}</h3>
                 <p className="text-text-muted mb-4">{resource.description}</p>
                 <div className="flex justify-between items-center">
-                  <a
-                    href="#"
-                    className="group inline-flex items-center text-primary font-medium"
-                  >
-                    {resource.isPremium ? "Download Free" : "Get E-Books"}{" "}
+                  <Button onClick={() => navigate(resource.link)} >
+                    Explore More
                     <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </a>
-                  
+                  </Button>
                 </div>
               </div>
             </div>
