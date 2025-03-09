@@ -3,11 +3,14 @@ import { useState, useEffect } from "react";
 import { Container } from "./ui/container";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { SearchDialog } from "./SearchDialog";
+import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,12 +110,12 @@ const Navbar = () => {
               >
                 {/* <Search className="h-5 w-5" /> */}
               </button>
-              <a
-                href="#cta"
+              <Button
+                onClick={() => navigate('/register')}
                 className="btn-hover inline-flex items-center justify-center rounded-md px-6 py-2.5 font-semibold text-white bg-secondary shadow-md"
               >
                 Get Started
-              </a>
+              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -184,13 +187,12 @@ const Navbar = () => {
                   Services
                 </a>
                 <div className="pt-2 px-4">
-                  <a
-                    href="#cta"
-                    onClick={toggleMobileMenu}
+                  <Button
+                    onClick={() => {toggleMobileMenu(); navigate('/register')}}
                     className="btn-hover w-full inline-flex items-center justify-center rounded-md px-6 py-2.5 font-semibold text-white bg-secondary shadow-md"
                   >
                     Get Started
-                  </a>
+                  </Button>
                 </div>
               </div>
             </div>
