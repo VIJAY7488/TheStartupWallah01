@@ -14,6 +14,8 @@ import InvestorsList from "./pages/InvestorsList/InvestorsList";
 import MarketingEbook from "./pages/EBookSection/MarketingEbook";
 import SalesEbook from "./pages/EBookSection/SalesEbook";
 import EntrepreneurshipEbook from "./pages/EBookSection/EntrepreneurshipEbook";
+import CaseStudiesReseach from "./pages/EBookSection/CaseStudiesResearch";
+import QASection from "./pages/EBookSection/QASection";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/resources/marketingebook" element={<MarketingEbook/>} />
           <Route path="/resources/salesebook" element={<SalesEbook/>} />
           <Route path="/resources/entrepreneurship" element={<EntrepreneurshipEbook/>} />
+          <Route path="/resources/casestudiesreseach" element={<CaseStudiesReseach/>} />
+          <Route path="/resources/q&asectionandgovernmentfunding" element={<QASection/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/investorslist" element={<InvestorsList />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

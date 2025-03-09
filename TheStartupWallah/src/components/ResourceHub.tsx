@@ -21,7 +21,7 @@ const resources = [
     isFeatured: true,
     isNew: false,
     isPremium: true,
-    link:"/resources/governmentfunding"
+    link:"/resources/q&asectionandgovernmentfunding"
   },
   {
     id: 2,
@@ -69,7 +69,7 @@ const resources = [
     isFeatured: false,
     isNew:false,
     isPremium: true,
-    link:"/resources/startupebook"
+    link:"/resources/q&asectionandgovernmentfunding"
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ const resources = [
     isFeatured: false,
     isNew: true,
     isPremium: false,
-    link:"/resources/casestudies&research"
+    link:"/resources/casestudiesreseach"
   },
 ];
 

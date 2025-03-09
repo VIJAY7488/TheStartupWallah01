@@ -12,7 +12,7 @@ export const blogPosts = [
     date: "May 15, 2023",
     image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     category: "Funding",
-    link:"/blog/pitch-deck-sins-that-make-investors-ghost-you"
+    link:"#"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const blogPosts = [
     date: "June 2, 2023",
     image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1736&q=80",
     category: "Product",
-    link:"/blog/build-an-mvp-that-investors-cant-resist"
+    link:"#"
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const blogPosts = [
     date: "June 18, 2023",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     category: "Finance",
-    link:"/blog/the-startup-equity-e-book"
+    link:"#"
   },
 ];
 

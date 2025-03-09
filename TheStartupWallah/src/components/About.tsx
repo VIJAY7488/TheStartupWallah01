@@ -4,9 +4,9 @@ const AboutUs: React.FC = () => {
   const [activeTab, setActiveTab] = useState("whoWeAre");
 
   const images = {
-    whoWeAre: "https://img.freepik.com/free-vector/meet-our-team-concept-landing-page_52683-12872.jpg?uid=R187627718&ga=GA1.1.856026252.1735303750&semt=ais_hybrid",
-    mission: "https://img.freepik.com/premium-vector/discussion-brainstorming-team-about-researching-business-data-illustration_318923-16.jpg?uid=R187627718&ga=GA1.1.856026252.1735303750&semt=ais_hybrid",
-    vision: "https://img.freepik.com/free-vector/meet-our-team-concept-landing-page_52683-12872.jpg?uid=R187627718&ga=GA1.1.856026252.1735303750&semt=ais_hybrid"
+    whoWeAre: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1739793466/group_ywbyd6.jpg",
+    mission: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741500415/mission_hodk04.avif",
+    vision: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1739793466/Investor_sqou1w.jpg"
   };
 
   return (
