@@ -81,13 +81,13 @@ const LoginForm: React.FC = () => {
               )}
             </div>
           ))}
-          <button type="submit" className="w-full bg-blue-600 text-white font-medium rounded-md py-2 hover:bg-blue-700 transition">
+          <button type="submit" className="w-full bg-primary text-white font-medium rounded-md py-2 hover:bg-primary/90 transition">
             Login
           </button>
           <p className="text-sm text-gray-500 text-center">
             You have not created an account yet?{" "}
             <Link to="/register">
-              <button className="text-blue-600 hover:underline">Sign up here</button>
+              <button className="text-primary hover:underline">Sign up here</button>
             </Link>
           </p>
         </form>

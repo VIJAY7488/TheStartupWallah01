@@ -108,11 +108,10 @@ const Navbar = () => {
                 className="p-2 text-text-dark hover:text-primary transition-colors rounded-full hover:bg-primary/5"
                 aria-label="Search"
               >
-                {/* <Search className="h-5 w-5" /> */}
               </button>
               <Button
                 onClick={() => navigate('/register')}
-                className="btn-hover inline-flex items-center justify-center rounded-md px-6 py-2.5 font-semibold text-white bg-secondary shadow-md"
+                className="btn-hover inline-flex items-center justify-center rounded-md px-6 py-2.5 font-semibold text-white bg-secondary shadow-md hover:bg-secondary"
               >
                 Get Started
               </Button>
@@ -189,7 +188,7 @@ const Navbar = () => {
                 <div className="pt-2 px-4">
                   <Button
                     onClick={() => {toggleMobileMenu(); navigate('/register')}}
-                    className="btn-hover w-full inline-flex items-center justify-center rounded-md px-6 py-2.5 font-semibold text-white bg-secondary shadow-md"
+                    className="btn-hover w-full inline-flex items-center justify-center rounded-md px-6 py-2.5 font-semibold text-white bg-secondary shadow-md hover:bg-secondary/90"
                   >
                     Get Started
                   </Button>
