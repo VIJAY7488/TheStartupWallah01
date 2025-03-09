@@ -1,73 +1,66 @@
 import React, { useState } from "react";
 import { Container } from "./ui/container";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle,} from "./ui/card";
 import { Button } from "./ui/button";
 import { ArrowRight, BookOpen, Award, TrendingUp, School } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Textarea } from "./ui/textarea";
 
 export const caseStudies = [
-  {
-    id: 1,
-    title: "OYO's Rapid Expansion Strategy",
-    founder: "Ritesh Agarwal",
-    category: "Hospitality",
-    description:
-      "How Ritesh Agarwal built OYO from a single hotel to a global hospitality chain valued at $9 billion by focusing on standardization and technology integration.",
-    learnings: [
-      "Importance of standardization in fragmented markets",
-      "Technology as a competitive advantage",
-      "Rapid scaling through strategic partnerships",
-      "Adaptation to local market conditions while expanding globally",
-    ],
-    icon: <Award className="h-6 w-6 text-primary" />,
-    image:
-      "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    downloadLink: "https://example.com/oyo-case-study.pdf",
-  },
-  {
-    id: 2,
-    title: "Zomato's Market Dominance",
-    founder: "Deepinder Goyal",
-    category: "FoodTech",
-    description:
-      "Deepinder Goyal's journey of transforming a menu scanning website into India's leading food delivery platform through strategic acquisitions and innovative business models.",
-    learnings: [
-      "Strategic pivoting from content to transactions",
-      "Leveraging network effects in two-sided marketplaces",
-      "Data-driven decision making for expansion",
-      "Building sustainable unit economics in high-frequency businesses",
-    ],
-    icon: <TrendingUp className="h-6 w-6 text-primary" />,
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    downloadLink: "https://example.com/zomato-case-study.pdf",
-  },
-  {
-    id: 3,
-    title: "Paytm's Digital Payments Revolution",
-    founder: "Vijay Shekhar Sharma",
-    category: "Fintech",
-    description:
-      "How Vijay Shekhar Sharma capitalized on India's demonetization to transform Paytm from a mobile recharge platform to India's leading digital payments ecosystem.",
-    learnings: [
-      "Identifying and capitalizing on regulatory changes",
-      "Building an ecosystem around core payment functionality",
-      "Creating a super-app strategy for retention",
-      "Strategic fundraising to fuel rapid growth",
-    ],
-    icon: <BookOpen className="h-6 w-6 text-primary" />,
-    image:
-      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    downloadLink: "https://example.com/paytm-case-study.pdf",
-  },
+  // {
+  //   id: 1,
+  //   title: "OYO's Rapid Expansion Strategy",
+  //   founder: "Ritesh Agarwal",
+  //   category: "Hospitality",
+  //   description:
+  //     "How Ritesh Agarwal built OYO from a single hotel to a global hospitality chain valued at $9 billion by focusing on standardization and technology integration.",
+  //   learnings: [
+  //     "Importance of standardization in fragmented markets",
+  //     "Technology as a competitive advantage",
+  //     "Rapid scaling through strategic partnerships",
+  //     "Adaptation to local market conditions while expanding globally",
+  //   ],
+  //   icon: <Award className="h-6 w-6 text-primary" />,
+  //   image:
+  //     "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+  //   downloadLink: "https://example.com/oyo-case-study.pdf",
+  // },
+  // {
+  //   id: 2,
+  //   title: "Zomato's Market Dominance",
+  //   founder: "Deepinder Goyal",
+  //   category: "FoodTech",
+  //   description:
+  //     "Deepinder Goyal's journey of transforming a menu scanning website into India's leading food delivery platform through strategic acquisitions and innovative business models.",
+  //   learnings: [
+  //     "Strategic pivoting from content to transactions",
+  //     "Leveraging network effects in two-sided marketplaces",
+  //     "Data-driven decision making for expansion",
+  //     "Building sustainable unit economics in high-frequency businesses",
+  //   ],
+  //   icon: <TrendingUp className="h-6 w-6 text-primary" />,
+  //   image:
+  //     "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+  //   downloadLink: "https://example.com/zomato-case-study.pdf",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Paytm's Digital Payments Revolution",
+  //   founder: "Vijay Shekhar Sharma",
+  //   category: "Fintech",
+  //   description:
+  //     "How Vijay Shekhar Sharma capitalized on India's demonetization to transform Paytm from a mobile recharge platform to India's leading digital payments ecosystem.",
+  //   learnings: [
+  //     "Identifying and capitalizing on regulatory changes",
+  //     "Building an ecosystem around core payment functionality",
+  //     "Creating a super-app strategy for retention",
+  //     "Strategic fundraising to fuel rapid growth",
+  //   ],
+  //   icon: <BookOpen className="h-6 w-6 text-primary" />,
+  //   image:
+  //     "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+  //   downloadLink: "https://example.com/paytm-case-study.pdf",
+  // },
   {
     id: 4,
     title: "Zerodha's Bootstrapped Success",
@@ -84,7 +77,7 @@ export const caseStudies = [
     icon: <School className="h-6 w-6 text-primary" />,
     image:
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    downloadLink: "https://example.com/zerodha-case-study.pdf",
+    downloadLink: "/",
   },
   {
     id: 5,
@@ -102,7 +95,7 @@ export const caseStudies = [
     icon: <Award className="h-6 w-6 text-primary" />,
     image:
       "https://plus.unsplash.com/premium_photo-1681488262364-8aeb1b6aac56?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    downloadLink: "https://example.com/zepto-case-study.pdf",
+    downloadLink: "https://drive.google.com/file/d/1I1p14cG7R0E0W4rCUCX5b3S15EftRBAe/view?usp=drivesdk",
   },
   {
     id: 6,
@@ -110,17 +103,17 @@ export const caseStudies = [
     founder: "Sachin & Binny Bansal",
     category: "E-commerce",
     description:  
-      "Aadit Palicha and Kaivalya Vohra, Stanford dropouts, built Zepto, India's largest quick commerce company,",
+      "Sachin and Binny Bansal from IIT dream to building India's largest e-commerce platform",
     learnings: [
       "Pioneering India's e-commerce revolution",
       "Customer-centric approach driving growth",
       "Robust logistics and supply chain innovation",
-      "Strategic partnerships and acquisitions for expansion",
+      "Customer Trust – COD, easy returns, and fast delivery.",
     ],
     icon: <Award className="h-6 w-6 text-primary" />,
     image:
       "https://images.unsplash.com/photo-1688561808434-886a6dd97b8c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZsaXBrYXJ0JTIwZWNvbW1lcmNlfGVufDB8fDB8fHww",
-    downloadLink: "https://example.com/zepto-case-study.pdf",
+    downloadLink: "https://drive.google.com/file/d/1I5TONoWuQsmL-YehLopVb5PTN4OLuAzN/view",
   },
 ];
 
@@ -255,7 +248,7 @@ const CaseStudies = () => {
                     <Button
                       variant="default"
                       className="w-full"
-                      onClick={() => window.open(study.downloadLink, "_blank")}
+                      onClick={() => window.open(study.downloadLink)}
                     >
                       View 
                     </Button>

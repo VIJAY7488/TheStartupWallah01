@@ -11,12 +11,12 @@ interface Ebook {
 }
 
 const ebooks: Ebook[] = [
-    { id: 1, name: "The Entrepreneurial Mindset", link: "https://example.com/marketing-techniques.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
-    { id: 2, name: "Market Gaps", link: "https://example.com/aarrr-framework.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
-    { id: 3, name: "Product Market Fit", link: "https://example.com/b2b-marketing-strategy.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
-    { id: 4, name: "TAM SAM SO MO", link: "https://example.com/barter-system.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
-    { id: 5, name: "Minimal Viable Product(MVP)", link: "https://example.com/business-models.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
-    { id: 6, name: "Essential Questions & Answers for Building a Startup", link: "https://example.com/business-models.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+    { id: 1, name: "The Entrepreneurial Mindset", link: "https://drive.google.com/file/d/1PxJ8mDfVjBAIL91XDFa_CvZUUS1cfAKW/view?usp=sharing", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+    { id: 2, name: "Market Gaps", link: "https://drive.google.com/file/d/1It1PzSWu7dDnAEWc9VpY_-6N5AgJilae/view?usp=sharing", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+    { id: 3, name: "Product Market Fit", link: "https://drive.google.com/file/d/17uByopmXDOPBHlOkTmT_HXS6XODsvzPV/view?usp=sharing", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+    { id: 4, name: "TAM SAM SO MO", link: "https://drive.google.com/file/d/14Teajowvyz6o721rIe554FI4N9H1ZADu/view?usp=drive_link", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+    { id: 5, name: "Minimal Viable Product(MVP)", link: "https://drive.google.com/file/d/1Rm1yaEj-WW7UaNVpKjjg5O-6xszrGnpw/view?usp=sharing", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+    { id: 6, name: "Essential Questions & Answers for Building a Startup", link: "https://drive.google.com/file/d/1MGpUC3H1m5K9bmIZnFMtXuxboQNXrL0M/view?usp=drive_link", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
 ];
 
 const EntrepreneurshipEbook: React.FC = () => {

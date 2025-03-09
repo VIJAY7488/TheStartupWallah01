@@ -11,11 +11,11 @@ interface Ebook {
 }
 
 const ebooks: Ebook[] = [
-    { id: 1, name: "B2B Sales Strategy", link: "https://example.com/marketing-techniques.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
-    { id: 2, name: "Building Customer Loyality", link: "https://example.com/aarrr-framework.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
-    { id: 3, name: "Cold Call strategy for D2C brand", link: "https://example.com/b2b-marketing-strategy.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
-    { id: 4, name: "Four Step Formula for Strategic Execution", link: "https://example.com/barter-system.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
-    { id: 5, name: "Customer Centric Sales", link: "https://example.com/business-models.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+    { id: 1, name: "THE EVOLUTION AND FUTURE OF INDIA'S FMCG INDUSTRY", link: "https://drive.google.com/file/d/1Z_oDmFB2oq5crL5bYXj8K24mPAZ3_sZl/view?usp=sharing", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+//     { id: 2, name: "Building Customer Loyality", link: "https://example.com/aarrr-framework.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+//     { id: 3, name: "Cold Call strategy for D2C brand", link: "https://example.com/b2b-marketing-strategy.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+//     { id: 4, name: "Four Step Formula for Strategic Execution", link: "https://example.com/barter-system.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+//     { id: 5, name: "Customer Centric Sales", link: "https://example.com/business-models.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
 ];
 
 const CaseStudiesReseach: React.FC = () => {
