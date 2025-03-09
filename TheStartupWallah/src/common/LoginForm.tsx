@@ -4,6 +4,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { usePasswordVisibility } from "../context/PasswordVisibilityContext";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import Navbar from "@/components/Navbar";
 
 interface FormData {
   email: string;
@@ -40,6 +41,8 @@ const LoginForm: React.FC = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="flex flex-col items-center justify-center min-h-screen px-6 py-8 mt-10">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
         <h1 className="text-xl font-bold text-gray-900 text-center mb-6">Login</h1>
@@ -90,6 +93,7 @@ const LoginForm: React.FC = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
