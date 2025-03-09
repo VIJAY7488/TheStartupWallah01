@@ -26,11 +26,11 @@ const testimonials = [
   {
     id: 3,
     content:
-      "The pitch deck service transformed our presentation. We went from getting rejected to securing three investment offers after working with The Startup Wallah team.",
-    author: "Alex Johnson",
-    position: "Co-founder, GreenTech",
-    image: "https://randomuser.me/api/portraits/men/22.jpg",
-    linkedIn:"https://www.linkedin.com/in/alex-johnson-2db7b222/"
+      " THE EVOLUTION AND FUTURE OF INDIA'S FMCG INDUSTRY  – A comprehensive report by Dr. Sunil Kumar Mishra, breaking down the trends, challenges, and growth opportunities in India’s FMCG sector. His research is equipping businesses with key industry insights.",
+    author: "Dr. Sunil Kumar Mishra",
+    position: "CHRO",
+    image: "https://media.licdn.com/dms/image/v2/C5603AQG9p9tK7c9D0g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1621605458031?e=1747267200&v=beta&t=pbgYS4icnv1RtwF6e0NvOl4I__fegKVBH-kOKIMVskQ",
+    linkedIn:"https://www.linkedin.com/in/dr-sunil-kumar-mishra-1b157368/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
 ];  
 
@@ -87,7 +87,7 @@ const Testimonials = () => {
                 <div key={testimonial.id} className="w-full flex-shrink-0 px-1">
                   <div className="glass-effect rounded-2xl p-6 md:p-10 h-full">
                     <div className="flex flex-col md:flex-row gap-8 items-start">
-                      <div className="w-full md:w-1/3">
+                      <div className="w-full md:w-1/3  mb-8">
                         <div className="relative mb-6">
                           <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-md">
                             <img

@@ -135,7 +135,7 @@ const ResourceHub = ({ fullPage = false }: ResourceHubProps) => {
                     Featured E-Book
                   </div>
                   <a
-                    href="#"
+                    href="https://drive.google.com/file/d/1E-Epe-ClPW6djvjbTF6h9OQDm2Gk4k-P/view?usp=sharing"
                     className="btn-hover inline-flex items-center justify-center rounded-md px-5 py-2 font-semibold text-primary bg-white shadow-md"
                   >
                     <Download className="w-4 h-4 mr-2" />

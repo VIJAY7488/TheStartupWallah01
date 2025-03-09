@@ -47,14 +47,14 @@ const AboutUs: React.FC = () => {
           {activeTab === "mission" && (
             <div>
               <p className="text-gray-700 text-lg leading-relaxed text-justify">
-                Helping startups thrive through investor connections, learning resources, and expert mentorship. We're committed to democratizing access to the tools and networks that traditionally only privileged founders could access.
+                Helping startups thrive through investor connections, learning resources, and expert services. We're committed to democratizing access to the tools and networks that traditionally only privileged founders could access.
               </p>
             </div>
           )}
           {activeTab === "vision" && (
             <div>
               <p className="text-gray-700 text-lg leading-relaxed text-justify">
-                A world where every startup has the resources to scale and succeed. We envision an ecosystem where location, background, or network limitations no longer dictate a startup's potential for success.              </p>
+              At The Startup Wallah, our vision is to empower and nurture the next generation of entrepreneurs by transforming groundbreaking ideas into sustainable and thriving businesses. We strive to create a dynamic ecosystem where startups gain access to essential resources, industry connections, and expert guidance. By fostering innovation and collaboration, we aim to bridge the gap between ambition and success, ensuring that every startup has the support it needs to scale, evolve, and make a lasting impact on the world.              </p>
             </div>
           )}
         </div>

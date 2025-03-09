@@ -87,7 +87,7 @@ const IndustryTrends = () => {
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
                 <div>
                   <div className="inline-block px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-full backdrop-blur-sm mb-4">
-                    2023 Comprehensive Report
+                    2024 Comprehensive Report
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold mb-4">The State of Startup Funding</h3>
                   <p className="text-white/80 max-w-2xl mb-6">
@@ -105,24 +105,10 @@ const IndustryTrends = () => {
                     </div>
                   </div>
                 </div>
-                <Button className="bg-white text-primary hover:bg-white/90 px-6 py-6" size="lg">
+                <a href="https://drive.google.com/file/d/10Eh15pJEeP_XdQwpexm0VUMDRORZSmCW/view?usp=sharing" className="bg-white text-primary flex items-center py-3 px-6 rounded ">
                   <Download className="mr-2 h-5 w-5" />
                   Get The Report
-                </Button>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <h4 className="text-xl font-semibold mb-1">67%</h4>
-                  <p className="text-white/70 text-sm">Decrease in early-stage deals compared to 2021</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <h4 className="text-xl font-semibold mb-1">3.2x</h4>
-                  <p className="text-white/70 text-sm">Average valuation multiple for SaaS startups</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                  <h4 className="text-xl font-semibold mb-1">$14.2M</h4>
-                  <p className="text-white/70 text-sm">Median Series A round size for fintech startups</p>
-                </div>
+                </a>
               </div>
             </div>
           </div>

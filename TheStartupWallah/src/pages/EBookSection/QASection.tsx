@@ -11,8 +11,8 @@ interface Ebook {
 }
 
 const ebooks: Ebook[] = [
-    { id: 1, name: "Essential Q&A for building a startup", link: "https://example.com/marketing-techniques.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
-    { id: 2, name: "The Complete Guide to Government Funding 2025", link: "https://example.com/aarrr-framework.pdf", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+    { id: 1, name: "Essential Q&A for building a startup", link: "https://drive.google.com/file/d/1MGpUC3H1m5K9bmIZnFMtXuxboQNXrL0M/view?usp=drive_link", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
+    { id: 2, name: "The Complete Guide to Government Funding 2025", link: "https://drive.google.com/file/d/1E-Epe-ClPW6djvjbTF6h9OQDm2Gk4k-P/view?usp=sharing", icon: "https://res.cloudinary.com/dsdcta1sr/image/upload/v1741453306/pngtree-book-icon-vector-image-png-image_6552370_zlgvdc.png" },
 ];
 
 const QASection: React.FC = () => {
@@ -22,7 +22,7 @@ const QASection: React.FC = () => {
             <div id="marketing" className="bg-gray-100 px-4 sm:px-6 py-8 mt-[70px]">
                 <h1 className="text-4xl font-bold mb-3 text-primary text-center">Essential Q&A for building a startup</h1>
                 <p className="text-lg text-gray-700 text-center max-w-5xl mx-auto mb-6 text-justify">
-                    Just as petrol powers your car, marketing books fuel your business with the knowledge and strategies needed to reach your goals.
+                    Just as petrol powers your car, this books fuel your business with the knowledge and strategies needed to reach your goals.
                 </p>
                 <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 ">
                     {ebooks.map((ebook) => (
