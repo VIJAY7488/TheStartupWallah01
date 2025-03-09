@@ -77,18 +77,18 @@ const CallToAction = () => {
                     </ul>
                   </div>
                 </div>
-
+ 
                 <div className="w-full md:w-1/2 animate-fade-in-right" style={{ animationDelay: "0.3s" }}>
                   <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                    <div className="flex items-center justify-center w-14 h-14 bg-secondary/20 rounded-full mb-4">
-                      <svg className="w-8 h-8 text-secondary " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <div className="flex items-center justify-center w-14 h-14 bg-secondary/20 rounded-full mb-4 ml-[100px] ">
+                      <svg className="w-8 h-8 text-secondary  " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 text-center">Join Our Community</h3>
                     <img src="https://res.cloudinary.com/dsdcta1sr/image/upload/v1741524600/WhatsApp_group_jp3hig.jpg" 
                     className="w-[200px] h-[200px] object-cover rounded mx-auto border border-secondary" alt="" />
-                    <a href="https://whatsapp.com/channel/0029Vb8iYyYKrWQriqbjc90K" className="block mt-4  bg-secondary  py-2 w-1/2 rounded text-white font-bold text-center mx-auto">Join</a>
+                    <a href="https://whatsapp.com/channel/0029Vb8iYyYKrWQriqbjc90K" className="block mt-4  bg-secondary  py-2 w-1/2 rounded text-white font-bold text-center mx-auto hover:bg-secondary/90">Join</a>
                   </div>
                 </div>
               </div>

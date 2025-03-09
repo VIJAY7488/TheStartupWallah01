@@ -78,14 +78,14 @@ const RegisterationForm: React.FC = () => {
           ))}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-medium rounded-md py-2 hover:bg-blue-700 transition"
+            className="w-full bg-primary text-white font-medium rounded-md py-2 hover:bg-primary/90 transition"
           >
             Create an account
           </button>
           <p className="text-sm text-gray-500 text-center">
             Already have an account?{" "}
             <Link to='/login'>
-              <button className="text-blue-600 hover:underline">
+              <button className="text-primary hover:underline">
                 Login here
               </button>
             </Link>
