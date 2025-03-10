@@ -57,7 +57,7 @@ const resources = [
     isFeatured: false,
     isNew: false,
     isPremium: false,
-    link:"/resources/entrepreneurship"
+    link:"/resources/entrepreneurshipebook"
   },
   {
     id: 5,
@@ -69,7 +69,7 @@ const resources = [
     isFeatured: false,
     isNew:false,
     isPremium: true,
-    link:"/resources/q&asectionandgovernmentfunding"
+    link:"/resources/qasectionandgovernmentfunding"
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ const resources = [
     isFeatured: false,
     isNew: true,
     isPremium: false,
-    link:"/resources/casestudiesreseach"
+    link:"/resources/casestudiesresearch"
   },
 ];
 
