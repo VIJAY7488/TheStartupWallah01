@@ -69,7 +69,7 @@ const Hero = () => {
                 <div className="w-10 h-10 rounded-full bg-gray-600 border-2 border-white flex items-center justify-center text-xs font-bold text-white">+5</div>
               </div>
               <p className="text-sm text-text-muted">
-                <span className="font-semibold text-primary">50+</span> startups funded this month
+                <span className="font-semibold text-primary">10+</span> startups funded this month
               </p>
             </div>
           </div>
@@ -99,11 +99,11 @@ const Hero = () => {
 
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <div className="text-3xl font-bold text-primary">$1M+</div>
+                    <div className="text-3xl font-bold text-primary">10+</div>
                     <p className="text-sm text-text-muted">Funding Raised</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <div className="text-3xl font-bold text-primary">200+</div>
+                    <div className="text-3xl font-bold text-primary">20+</div>
                     <p className="text-sm text-text-muted">Startups Helped</p>
                   </div>
                 </div>
