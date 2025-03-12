@@ -1,9 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const { authRouter } = require('./routes/authRoutes');
 const { PORT, CONNECTION_STRING } = require('./config/config');
-const authRouter = require('./routes/authRoutes')
 const path = require('path');
+const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
@@ -11,7 +12,7 @@ const _dirname = path.resolve();
 
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:8080',
+    origin: 'https://www.thestartupwallah.com',
     methods: ['GET', 'POST', 'DELETE', 'PUT'],
     allowedHeaders: [
         'Content-Type', 'Authorization', 'Cache-Control', 'Expires', 'Pragma'
@@ -25,8 +26,8 @@ mongoose.connect(CONNECTION_STRING)
 .catch(error => console.log('Error ' + error));
 
 app.use('/api/auth', authRouter);
-app.use('/api/auth', authRouter);
-app.use('/api/auth', authRouter);
+app.use('/api/user/', userRouter);
+
 
 app.use(express.static(path.join(_dirname, "/TheStartupWallah/dist")));
 app.get('*', (req, res) => {

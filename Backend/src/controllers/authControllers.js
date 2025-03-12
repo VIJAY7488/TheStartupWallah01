@@ -8,18 +8,30 @@ const authentication = require('../utitlities');
 const registerUser = async(req, res) => {
     const {name, email, password} = req.body;
 
+    if(!name || !email || !password){
+      return res.status(400).json({success: false, message: "Missing Details"})
+    };
+
     try {
-      const isEmailExist = await User.findOne({email});
-      if(isEmailExist){
-        return res.json({success: false, message: 'Email is already registered.'})
+      const hashPassword = await bcrypt.hash(password, 10);
+      const existingUser = await User.findOne({email});
+      if(!existingUser){
+        return res.status(400).json({success: false, message: 'Email is already registered.'})
       }
-      const hashPassword = await bcrypt.hash(password, 10);  
-      const newUser = new User({
+  
+      const user = new User({
         name,
         email,
         password: hashPassword
       });
+      
       await newUser.save();
+
+      const token = jwt.sign({id: user._id}, ACCESS_TOKEN_SECRET, {
+        expiresIn: '1d'
+      });
+
+      res.cookie('token', token, {httpOnly: true, secure: false, sameSite: 'Lax', maxAge: 1 * 24 * 60 * 60 * 1000})
 
       res.status(200).json({
         success: true,
@@ -29,7 +41,7 @@ const registerUser = async(req, res) => {
        console.log(error);
        res.status(500).json({
         success: false,
-        message: "Some error occured",
+        message: "Error occured from registration.",
        }) 
     }
 };
@@ -39,27 +51,30 @@ const registerUser = async(req, res) => {
 const loginUser = async(req, res) => {
     const {email, password} = req.body;
 
+    if(!email || !password){
+      return res.status(400).json({success: false, message: "Email and password is required"})
+    };
+
     try {
-      const isUserExist = await User.findOne({email});
-      if(!isUserExist){
-        return res.json({success: false, message: "User is not found."})
+      const user = await User.findOne({email});
+      if(!user){
+        return res.json({success: false, message: "User not found."})
       };
 
-      const comparePassword = await bcrypt.compare(password, isUserExist.password);  
+      const isMatch = await bcrypt.compare(password, user.password);  
 
-      if(!comparePassword){
-        return res.status(401).json({ success: false, message: "Incorrect Password" });
+      if(!isMatch){
+        return res.status(400).json({ success: false, message: "Invalid Password" });
       }
 
       const token = jwt.sign({
-        id:isUserExist._id, email: isUserExist.email
-      }, ACCESS_TOKEN_SECRET, {expiresIn: "15m"});
+        id:user._id}, ACCESS_TOKEN_SECRET, {expiresIn: "15m"});
 
-      res.cookie('token', token, {httpOnly: true, secure: false}).json({
+      res.cookie('token', token, {httpOnly: true, secure: false, sameSite: 'Lax', maxAge: 15 * 60 * 1000})
+      
+      res.status(200).json({
         success: true,
         message: 'Login Successfully.',
-        userId: isUserExist._id,
-        token
       })
 
     } catch (error) {
@@ -71,30 +86,28 @@ const loginUser = async(req, res) => {
     }
 };
 
-//Get User Info
-const getUserInfo = async(req, res) => {
-  const user = req.body;
-  try {
-    const isUserExist = await User.findById(req.params.id);
-    if(!isUserExist){
-      return res.status(400).json({msg: 'User not Found'});
-    };
 
-    return res.status(201).json({ 
-      success: true, 
-      user: {
-        name: isUserExist.name
-      }
+//Logout
+const userLogout = async(req, res) => {
+  try {
+    res.clearCookie('token', {
+      httpOnly: true,
+      secure: false,
+      sameSite: 'Lax',
+      maxAge: 15 * 60 * 1000
     });
 
+    return res.status(200).json({success: true, message: "User logout successfully."})
   } catch (error) {
-    console.log('Error from User Info : ' + error);
-    return res.status(201).json({ success: false, msg: "Error in User Info"});
+    console.log(error);
+    return res.status(500).json({success: false, message: "Error occured from logout."})
   }
 };
+
+
 
 module.exports = {
     registerUser,
     loginUser,
-    getUserInfo
+    userLogout
 }
