@@ -92,7 +92,7 @@ const Hero = () => {
                       Success Story
                     </div>
                     <h3 className="text-lg font-semibold">
-                      How DigitalCore raised $2M in seed funding
+                      We are as a Startup for startups.
                     </h3>
                   </div>
                 </div>
