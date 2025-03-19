@@ -15,10 +15,10 @@ const Contact = () => {
       </Helmet>
       <Navbar />
       <div className="pt-20">
-        <header className="bg-primary py-20 text-white">
-          <div className="container mx-auto px-4">
+        <header className="bg-primary py-20 text-white ">
+          <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl max-w-3xl">We're here to answer your questions and help your startup succeed</p>
+            <p className="text-xl ">We're here to answer your questions and help your startup succeed</p>
           </div>
         </header>
         
@@ -36,7 +36,7 @@ const Contact = () => {
                     <MapPin className="text-primary mt-1" />
                     <div>
                       <h3 className="font-semibold text-lg">Our Location</h3>
-                      <p className="text-text-muted">123 Innovation Street, Startup Hub, Mumbai 400001</p>
+                      <p className="text-text-muted">Whitefield, Bangalore 560066</p>
                     </div>
                   </div>
                   
@@ -44,15 +44,15 @@ const Contact = () => {
                     <Mail className="text-primary mt-1" />
                     <div>
                       <h3 className="font-semibold text-lg">Email Us</h3>
-                      <p className="text-text-muted">hello@startupwallah.com</p>
+                      <p className="text-text-muted">ashutosh@thestartupwallah.com</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
                     <Phone className="text-primary mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg">Call Us</h3>
-                      <p className="text-text-muted">+91 98765 43210</p>
+                      <h3 className="font-semibold text-lg">Contact Us</h3>
+                      <p className="text-text-muted">+91 9481912068</p>
                     </div>
                   </div>
                 </div>
@@ -61,11 +61,11 @@ const Contact = () => {
                   <h3 className="text-xl font-bold mb-4">Join Our Community</h3>
                   <p className="mb-4">Connect with fellow entrepreneurs and get access to exclusive resources.</p>
                   <div className="flex space-x-4">
-                    <a href="#" className="bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition-colors">
-                      Telegram Community
+                    <a href="https://wa.me/message/DB45B2CA3YBTE1 " className="bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition-colors">
+                      Startup Community
                     </a>
-                    <a href="#" className="bg-secondary text-white px-4 py-2 rounded hover:bg-secondary-dark transition-colors">
-                      Discord Channel
+                    <a href="https://www.linkedin.com/company/the-startup-wallah/about/" className="bg-secondary text-white px-4 py-2 rounded hover:bg-secondary-dark transition-colors">
+                      Linkedin Channel
                     </a>
                   </div>
                 </div>
