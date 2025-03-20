@@ -1,10 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const { authRouter } = require('./routes/authRoutes');
 const { PORT, CONNECTION_STRING } = require('./config/config');
 const path = require('path');
 const userRouter = require('./routes/userRoutes');
+const authRouter = require('./routes/authRoutes')
 
 const app = express();
 

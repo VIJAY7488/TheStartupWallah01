@@ -1,5 +1,4 @@
 const express = require('express');
-const authentication = require('../utitlities');
 const { registerUser, loginUser, userLogout } = require('../controllers');
 
 

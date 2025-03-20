@@ -2,7 +2,7 @@ const User = require('../models/userModels');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const {ACCESS_TOKEN_SECRET} = require('../config/config');
-const authentication = require('../utitlities');
+
 
 //Register
 const registerUser = async(req, res) => {
