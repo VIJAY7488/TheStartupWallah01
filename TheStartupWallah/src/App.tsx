@@ -16,7 +16,6 @@ import CaseStudiesResearch from "./pages/EBookSection/CaseStudiesResearch";
 import QASection from "./pages/EBookSection/QASection";
 import RegisterationForm from "./common/RegistrationForm";
 import { PasswordVisibilityProvider } from "./context/PasswordVisibilityContext";
-import { AuthProvider } from "./context/AuthContext";
 import LoginForm from "./common/LoginForm";
 
 
@@ -24,7 +23,6 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <AuthProvider>
     <TooltipProvider>
       <Toaster />
       <BrowserRouter>
@@ -56,7 +54,6 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
-    </AuthProvider>
   </QueryClientProvider>
 );
 
