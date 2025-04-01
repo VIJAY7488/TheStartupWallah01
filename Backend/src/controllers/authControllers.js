@@ -15,7 +15,7 @@ const registerUser = async(req, res) => {
     try {
       const hashPassword = await bcrypt.hash(password, 10);
       const existingUser = await User.findOne({email});
-      if(!existingUser){
+      if(existingUser){
         return res.status(400).json({success: false, message: 'Email is already registered.'})
       }
   
@@ -25,13 +25,13 @@ const registerUser = async(req, res) => {
         password: hashPassword
       });
       
-      await newUser.save();
+      await user.save();
 
       const token = jwt.sign({id: user._id}, ACCESS_TOKEN_SECRET, {
         expiresIn: '1d'
       });
 
-      res.cookie('token', token, {httpOnly: true, secure: false, sameSite: 'Lax', maxAge: 1 * 24 * 60 * 60 * 1000})
+      res.cookie('token', token, {httpOnly: true, secure: true, sameSite: 'Strict', maxAge: 1 * 24 * 60 * 60 * 1000})
 
       res.status(200).json({
         success: true,
@@ -68,9 +68,9 @@ const loginUser = async(req, res) => {
       }
 
       const token = jwt.sign({
-        id:user._id}, ACCESS_TOKEN_SECRET, {expiresIn: "15m"});
+        id:user._id}, ACCESS_TOKEN_SECRET, {expiresIn: "1d"});
 
-      res.cookie('token', token, {httpOnly: true, secure: false, sameSite: 'Lax', maxAge: 15 * 60 * 1000})
+      res.cookie('token', token, {httpOnly: true, secure: false, sameSite: 'Lax', maxAge: 24 * 60 * 60 * 1000})
       
       res.status(200).json({
         success: true,
