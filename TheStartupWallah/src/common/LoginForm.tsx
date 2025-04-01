@@ -47,7 +47,7 @@ const LoginForm: React.FC = () => {
       console.log("Submitted Data:", formData);
       const response = await axios.post(
         "https://www.thestartupwallah.com/api/auth/login",
-        { email: formData.email, passord: formData.password }
+        { email: formData.email, password: formData.password }
       );
 
       if (response.data && response.data.message) {
